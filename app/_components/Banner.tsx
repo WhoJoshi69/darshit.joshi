@@ -50,7 +50,7 @@ const Banner = () => {
                         <span className="font-medium text-foreground">
                             Darshit
                         </span>
-                        . A creative Backend Developer with 3+ years of
+                        . A creative Backend Developer with 2.5+ years of
                         experience in building high-performance, scalable, and
                         responsive web solutions.
                     </p>
