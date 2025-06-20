@@ -29,8 +29,8 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Tajmirul Islam',
-    description: 'Personal portfolio of Tajmirul Islam',
+    title: 'Portfolio - Darshit Joshi',
+    description: 'Personal portfolio of Darshit Joshi',
 };
 
 export default function RootLayout({
@@ -67,7 +67,7 @@ export default function RootLayout({
                         rel="noopener noreferrer"
                         className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
                     >
-                        Frontend dev? I&apos;ll help you polish your resume —
+                        Are you a developer? I&apos;ll help you polish your resume —
                         completely free.
                     </a> */}
                     <Navbar />

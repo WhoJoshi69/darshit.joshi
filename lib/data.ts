@@ -1,23 +1,41 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
+    email: 'joshidarshit2002@gmail.com',
 
     emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
+    emailBody: 'Hi Darshit, I am reaching out to you because...',
 
     oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    upworkProfile: 'https://www.upwork.com/freelancers/~018df6b96968e88ced',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
+    { name: 'github', url: 'https://github.com/WhoJoshi69' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/darshitjoshi2002' },
+    { name: 'instagram', url: 'https://www.instagram.com/dar_shit_joshi' },
     { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
 ];
 
 export const MY_STACK = {
+    backend: [
+        {
+            name: 'Python',
+            icon: '/logo/python.svg',
+        },
+        {
+            name: 'FastAPI',
+            icon: '/logo/fastapi.svg',
+        },
+        {
+            name: 'Node.js',
+            icon: '/logo/node.png',
+        },
+        {
+            name: 'Express.js',
+            icon: '/logo/express.png',
+        },
+    ],
     frontend: [
         {
             name: 'Javascript',
@@ -36,42 +54,8 @@ export const MY_STACK = {
             icon: '/logo/next.png',
         },
         {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
             name: 'Tailwind CSS',
             icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Frammer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'SASS',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
-    ],
-    backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-        {
-            name: 'Nest.js',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
         },
     ],
     database: [
@@ -92,6 +76,20 @@ export const MY_STACK = {
             icon: '/logo/prisma.png',
         },
     ],
+    AI: [
+        {
+            name: 'Prompt Engineering',
+            icon: '/logo/prompt.svg',
+        },
+        {
+            name: 'Lang Chain',
+            icon: '/logo/langchain.svg',
+        },
+        {
+            name: 'Hugging Face',
+            icon: '/logo/hugging.svg',
+        },
+    ],
     tools: [
         {
             name: 'Git',
@@ -110,49 +108,48 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'MTI Electronics',
+        title: 'WhoJoshi Stable Diffusion',
         slug: 'mti-electronics',
-        liveUrl: 'https://mti-electronics.vercel.app/',
+        liveUrl: 'https://stable-diffusion-five.vercel.app/',
         year: 2025,
-        description: `
-      A complete agency portfolio platform built for MTI Electronics to showcase their services, blog content, and product offerings. <br/> <br/>
-      
-      Key Features:<br/>
-      <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
-      </ul><br/>
-      
-      Technical Highlights:
-      <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
-      </ul>
+        description: `A generative art platform built for WhoJoshi using Stable Diffusion models to create stylized AI artwork based on user prompts. Integrated with Hugging Face-hosted models and LoRA fine-tunings for high customization. <br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>🎨 Prompt-to-Image Generator: Users can generate AI art using custom text prompts</li>
+  <li>🔧 LoRA Switching: Dynamic application of different LoRA fine-tuned models for varied styles</li>
+  <li>🧠 Hugging Face Integration: Hosted and called inference endpoints securely</li>
+  <li>📱 Responsive Design: Optimized interface for mobile and desktop users</li>
+  <li>⚡ Fast Generation Feedback: Asynchronous task queue to handle image generation efficiently</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Integrated Hugging Face Inference API with token-based authorization</li>
+  <li>Built Python backend to manage prompt processing, LoRA selection, and image output</li>
+  <li>Designed frontend with React and Tailwind for a smooth UX</li>
+  <li>Implemented asynchronous queue system (using Celery + Redis or similar) to manage inference load</li>
+  <li>Added local image gallery with download and share options</li>
+</ul>
       `,
         role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
-      <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
-      </ul>
+        Full-Stack Developer <br/>
+Owned end-to-end development and model integration:
+<ul>
+  <li>✅ Backend: Created a Python-based server to handle Stable Diffusion prompt processing and LoRA selection</li>
+  <li>🎨 Frontend: Built the UI in React with Tailwind CSS, optimized for art previews</li>
+  <li>🧠 Model Ops: Integrated multiple LoRA models via Hugging Face endpoints</li>
+  <li>🔁 Async Workflow: Set up task queue system for smooth async generation (Celery/Redis)</li>
+  <li>🚀 Deployment: Deployed backend on AWS EC2 and frontend on Vercel</li>
+  <li>📂 File Handling: Managed image output storage and delivery via secure download links</li>
+</ul>
       `,
         techStack: [
-            'Next.js',
-            'Payload CMS',
+            'React.js',
+            'Python',
+            'Hugging Face',
+            'Civit AI LoRA',
             'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
             'Vercel',
         ],
         thumbnail: '/projects/thumbnail/mti-electronics.webp',
@@ -186,7 +183,7 @@ export const PROJECTS: IProject[] = [
         liveUrl: 'https://demo.epikcart.siphertech.com/',
         year: 2023,
         description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
+        role: `As the backend developer in a team of five, I: <br/>
         - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
         - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
         - Integrated multi-language support with React i18n, including RTL handling.<br/>
@@ -239,7 +236,7 @@ export const PROJECTS: IProject[] = [
         year: 2023,
         description:
             'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
+        role: `As the backend developer, I:<br/>
         - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
         - Integrated dynamic state management for efficient handling of property data.<br/>
         - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
@@ -286,23 +283,13 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Software Engineer (Backend)',
+        company: 'Dosepack',
+        duration: 'Dec 2022 - Mar 2025',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
-    },
-    {
-        title: 'FRONTEND ENGINEER',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
-    },
-    {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'Software Engineer (Generative AI)',
+        company: 'Armakuni',
+        duration: 'Oct 2023 - Present',
     },
 ];
