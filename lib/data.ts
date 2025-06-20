@@ -14,7 +14,6 @@ export const SOCIAL_LINKS = [
     { name: 'github', url: 'https://github.com/WhoJoshi69' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/darshitjoshi2002' },
     { name: 'instagram', url: 'https://www.instagram.com/dar_shit_joshi' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
 ];
 
 export const MY_STACK = {
@@ -108,10 +107,222 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'WhoJoshi Stable Diffusion',
-        slug: 'mti-electronics',
-        liveUrl: 'https://stable-diffusion-five.vercel.app/',
+        title: 'DosePack',
+        slug: 'dosepack',
+        techStack: [
+            'FastAPI',
+            'Celery',
+            'Redis',
+            'PostgreSQL',
+            'Docker',
+            'Kubernetes',
+            'Jenkins',
+            'Api Integration',
+        ],
+        thumbnail: '/projects/long/dosepack.png',
+        longThumbnail: '/projects/long/dosepack.png',
+        images: ['/projects/images/dosepack.png'],
+        liveUrl: 'https://dosepacker.com/',
+        year: 2023,
+        description: `An automated backend system built for DosePack to streamline pharmacy prescription filling, labeling, and packaging processes. Designed for high availability and scalability within a Kubernetes-managed infrastructure. <br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>💊 Prescription Intake: Automated processing of incoming prescriptions from multiple sources</li>
+  <li>🔁 Task Queuing: Reliable job execution pipeline using Celery for background processing</li>
+  <li>🧾 Label Generation: Dynamic PDF label generation with medication and dosage info</li>
+  <li>📦 Packaging Integration: API interfaces for communicating with robotic packaging hardware</li>
+  <li>📈 Monitoring: Integrated logging and job tracking for real-time system observability</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Developed scalable FastAPI services with modular architecture</li>
+  <li>Set up Celery workers with Redis broker to handle asynchronous tasks like parsing, validation, and label generation</li>
+  <li>Containerized services with Docker and deployed on Kubernetes with health checks and auto-scaling</li>
+  <li>Configured CI/CD pipelines using Jenkins for testing, building, and deploying services</li>
+  <li>Implemented secure API communication between services and external hardware endpoints</li>
+</ul>
+`,
+        role: `Backend Engineer <br/>
+Led backend architecture and automation workflows:
+<ul>
+  <li>✅ API Development: Built FastAPI endpoints for prescription intake, status tracking, and label generation</li>
+  <li>🔄 Task Orchestration: Designed and managed Celery workflows for job scheduling and execution</li>
+  <li>📦 Infrastructure: Containerized backend services with Docker and deployed them using Kubernetes</li>
+  <li>🛠️ CI/CD: Set up Jenkins pipelines for automated builds, tests, and deployments</li>
+  <li>🔒 Integration: Developed secure communication protocols with pharmacy hardware units</li>
+  <li>📊 Observability: Integrated logging, tracing, and retry mechanisms for reliable operations</li>
+</ul>`,
+    },
+    {
+        title: 'Zen Space',
+        slug: 'zen-space',
+        techStack: ['Next.js', 'Prisma', 'Tailwind CSS'],
+        thumbnail: '/projects/long/zen-space.png',
+        longThumbnail: '/projects/long/zen-space.png',
+        images: [
+            '/projects/images/zen-space-1.png',
+            '/projects/images/zen-space-2.png',
+        ],
+        sourceCode: 'https://github.com/WhoJoshi69/zen.space',
+        liveUrl: 'https://zenspace-five.vercel.app/',
         year: 2025,
+        description: `A wellness-focused productivity web app where users can create their own calming space, manage tasks with to-do lists, use the Pomodoro technique, and listen to ambient sounds like rain, ASMR, and meditation music to enhance focus. <br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>📝 To-Do List: Minimal and intuitive task manager with priority tagging</li>
+  <li>⏱️ Pomodoro Timer: Customizable focus/break intervals with session tracking</li>
+  <li>🎧 Ambient Sound Player: Users can mix ambient sounds like rain, ocean, forest, ASMR, and soft music</li>
+  <li>🧘 Personalized Space: Users can select themes, backgrounds, and toggle features</li>
+  <li>💾 Persistent Storage: Local storage or user-authenticated cloud save for preferences and tasks</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Implemented audio mixer with layered ambient sounds and volume control</li>
+  <li>Built modular components using React and Tailwind for a clean, relaxing UI</li>
+  <li>Used Zustand for state management to sync Pomodoro, task list, and audio controls</li>
+  <li>Added theme switching and animations for personalized experiences</li>
+  <li>Integrated service workers for offline support</li>
+</ul>
+`,
+        role: `
+Full-Stack Developer <br/>
+Led the development and experience design of the platform:
+<ul>
+  <li>✅ Frontend: Developed UI components in Next with Tailwind CSS</li>
+  <li>🎵 Audio Engine: Created a custom ambient sound player with multi-track mixing</li>
+  <li>⏱️ Productivity Tools: Implemented Pomodoro logic and responsive to-do lists with drag-and-drop</li>
+  <li>🧘 UX Design: Designed calm and focused UI/UX with theme customization</li>
+  <li>🗂️ State Persistence: Used Zustand and browser storage for seamless user experience</li>
+  <li>🚀 Deployment: Deployed on Vercel with PWA capabilities for installable app-like behavior</li>
+</ul>
+`,
+    },
+    {
+        title: 'Movie Recommendation',
+        slug: 'movie-recommendation',
+        techStack: [
+            'React.js',
+            'Redux',
+            'Tailwind CSS',
+            'Framer Motion',
+            'Node.js',
+            'Pupeteer',
+            'TMDB API',
+            'Axios',
+        ],
+        thumbnail: '/projects/long/movie-r.png',
+        longThumbnail: '/projects/long/movie-r.png',
+        images: [
+            '/projects/images/movie-r-1.png',
+            '/projects/images/movie-r-2.png',
+            '/projects/images/movie-r-3.png',
+            '/projects/images/movie-r-4.png',
+        ],
+        sourceCode:
+            'https://github.com/WhoJoshi69/whojoshi-movie-recommendation',
+        liveUrl: 'https://whojoshi-recommendation.vercel.app/',
+        year: 2025,
+        description: `An AI-powered movie and TV show recommendation platform that personalizes suggestions using generative AI. Integrated with TMDB for rich metadata, trailers, and posters. Users can discover, get recommendations, and stream content directly on the server. <br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>🎬 Smart Recommendations: AI-generated suggestions based on user mood, genre, or previous choices</li>
+  <li>📺 Dual Support: Browse both Movies and TV Shows with detailed overviews, ratings, and cast info</li>
+  <li>🔍 TMDB Integration: Real-time search and discovery powered by The Movie Database API</li>
+  <li>📼 Built-in Streaming: Server-hosted player to stream selected titles</li>
+  <li>🧠 Generative AI Chat: Users can chat with an AI to get tailored watchlists or ask for hidden gems</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Implemented OpenAI/Groq-backed generative AI to provide conversational recommendations</li>
+  <li>Integrated TMDB APIs for fetching movie data, trailers, and search autocomplete</li>
+  <li>Used React with shadcn UI components for a clean, responsive interface</li>
+  <li>Created a full-featured media player with support for server-hosted video streaming</li>
+  <li>Built custom recommendation engine to blend AI results with TMDB trending data</li>
+</ul>
+
+`,
+        role: `
+Full-Stack Developer <br/>
+Architected the entire experience from frontend to AI integration:
+<ul>
+  <li>✅ Frontend: Built the React interface using Tailwind CSS and shadcn for consistent design</li>
+  <li>🎥 Media Player: Integrated custom video player with seek, subtitles, and fullscreen support</li>
+  <li>🧠 AI Layer: Connected a generative AI model to interpret user queries and recommend titles</li>
+  <li>🔗 API Integration: Fetched and synced metadata from TMDB with caching for speed</li>
+  <li>🗂️ Backend: Managed content streaming and media storage on server</li>
+  <li>🚀 Deployment: Deployed app and streaming server with optimized video delivery and CDN support</li>
+</ul>
+`,
+    },
+    {
+        title: 'Youtube Subscription Manager',
+        slug: 'youtube-subscription-manager',
+        techStack: [
+            'React.js',
+            'Node.js',
+            'Supabase',
+            'Axios',
+            'Tailwind CSS',
+            'Framer Motion',
+        ],
+        thumbnail: '/projects/long/yt.png',
+        longThumbnail: '/projects/long/yt.png',
+        images: [
+            '/projects/images/yt-0.png',
+            '/projects/images/yt-1.png',
+            '/projects/images/yt-2.png',
+            '/projects/images/yt-3.png',
+            '/projects/images/yt-4.png',
+            '/projects/images/yt-5.png',
+            '/projects/images/yt-6.png',
+            '/projects/images/yt-7.png',
+        ],
+        sourceCode:
+            'https://github.com/WhoJoshi69/Youtube-subscription-manager',
+        liveUrl: 'https://youtube-subscription-manager.vercel.app',
+        year: 2025,
+        description: `A personalized YouTube subscription management platform that helps users organize, track, and interact with their favorite channels more efficiently. Built with React and powered by Supabase for real-time data sync and user authentication. <br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>🔍 Channel Search: Search and subscribe to any YouTube channel using the YouTube Data API</li>
+  <li>📺 Video Feed: View latest videos from your subscribed channels in a grid layout</li>
+  <li>✅ Watched Tracker: Mark videos as watched to hide them from view and reduce clutter</li>
+  <li>🗂️ Filter & Sort: Organize feed by newest, oldest, most popular, or channel name</li>
+  <li>🔐 Auth & Sync: Supabase authentication and real-time sync of user subscriptions</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Used YouTube Data API to fetch channel and video metadata dynamically</li>
+  <li>Implemented Supabase for authentication, database, and real-time updates</li>
+  <li>Built UI using React and Tailwind with shadcn for clean, modern components</li>
+  <li>Designed scalable schema to store subscriptions, watched status, and preferences per user</li>
+  <li>Added sorting, filtering, and pagination for optimal performance and UX</li>
+</ul>
+`,
+        role: `Full-Stack Developer <br/>
+Handled the complete product flow from backend schema to frontend UI:
+<ul>
+  <li>✅ Frontend: Developed the app using React, Tailwind, and shadcn for seamless UX</li>
+  <li>📡 API Integration: Connected YouTube Data API for channel/video retrieval and metadata display</li>
+  <li>🗃️ Database Design: Structured Supabase tables for subscriptions and watched history</li>
+  <li>🔐 Auth: Implemented Supabase Auth for user login, session management, and access control</li>
+  <li>♻️ Real-Time Sync: Used Supabase's real-time features to reflect updates across sessions instantly</li>
+  <li>🚀 Deployment: Deployed the app on Vercel with environment-secured API tokens and Supabase keys</li>
+</ul>`,
+    },
+    {
+        title: 'WhoJoshi Stable Diffusion',
+        slug: 'whojoshi-stable-diffusion',
+        liveUrl: 'https://stable-diffusion-l99s.onrender.com/',
+        year: 2023,
         description: `A generative art platform built for WhoJoshi using Stable Diffusion models to create stylized AI artwork based on user prompts. Integrated with Hugging Face-hosted models and LoRA fine-tunings for high customization. <br/><br/>
 
 Key Features:<br/>
@@ -152,132 +363,9 @@ Owned end-to-end development and model integration:
             'Tailwind CSS',
             'Vercel',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
-        images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
-        ],
-    },
-    {
-        title: 'Epikcart',
-        slug: 'epikcart',
-        techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
-        ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the backend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
-    },
-    {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
-        techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
-        ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
-    },
-    {
-        title: 'Real Estate',
-        slug: 'property-pro',
-        techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
-        ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the backend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
-    },
-    {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
-
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+        thumbnail: '/projects/long/stable-diffusion.png',
+        longThumbnail: '/projects/long/stable-diffusion.png',
+        images: ['/projects/images/stable-diffusion.png'],
     },
 ];
 
