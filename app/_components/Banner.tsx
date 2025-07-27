@@ -5,12 +5,13 @@ import { GENERAL_INFO } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import React from 'react';
+import React, { useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     // move the content a little up on scroll
     useGSAP(
@@ -54,16 +55,77 @@ const Banner = () => {
                         experience in building high-performance, scalable, and
                         responsive web solutions.
                     </p>
-                    <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={GENERAL_INFO.upworkProfile}
-                        variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
-                    >
-                        Hire Me
-                    </Button>
+                    <div className="flex gap-4 mt-9">
+                        <Button
+                            as="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={GENERAL_INFO.upworkProfile}
+                            variant="primary"
+                            className="banner-button slide-up-and-fade"
+                        >
+                            Hire Me
+                        </Button>
+
+                        <div className="relative">
+                            <Button
+                                as="button"
+                                variant="secondary"
+                                className="banner-button slide-up-and-fade"
+                                onClick={() =>
+                                    setIsDropdownOpen(!isDropdownOpen)
+                                }
+                            >
+                                Schedule a Meeting
+                                <svg
+                                    className={`w-4 h-4 ml-2 transition-transform inline ${
+                                        isDropdownOpen ? 'rotate-180' : ''
+                                    }`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </Button>
+
+                            {isDropdownOpen && (
+                                <div
+                                    className="absolute top-full left-0 w-full bg-background border border-border rounded-md shadow-lg z-10"
+                                    onMouseEnter={() => setIsDropdownOpen(true)}
+                                    onMouseLeave={() =>
+                                        setIsDropdownOpen(false)
+                                    }
+                                >
+                                    <a
+                                        href={
+                                            GENERAL_INFO.meetingLinks['15min']
+                                        }
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-4 py-3 text-sm hover:bg-background-active transition-colors border-b border-border"
+                                    >
+                                        15 Minutes
+                                    </a>
+                                    <a
+                                        href={
+                                            GENERAL_INFO.meetingLinks['30min']
+                                        }
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-4 py-3 text-sm hover:bg-background-active transition-colors"
+                                    >
+                                        30 Minutes
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
 
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">

@@ -8,6 +8,11 @@ export const GENERAL_INFO = {
 
     oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
     upworkProfile: 'https://www.upwork.com/freelancers/~018df6b96968e88ced',
+
+    meetingLinks: {
+        '15min': 'https://cal.com/darshit.joshi/15min',
+        '30min': 'https://cal.com/darshit.joshi/30min',
+    },
 };
 
 export const SOCIAL_LINKS = [
