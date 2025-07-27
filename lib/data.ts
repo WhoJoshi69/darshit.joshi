@@ -107,6 +107,64 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
+        title: 'AI call assistant',
+        slug: 'smart-call-assistant',
+        year: 2025,
+        description: `An AI-powered voice assistant built for home sales in Florida, designed to handle inbound calls and guide prospects through a human-like conversation to book community visits. Powered by Twilio for telephony, Bedrock-hosted LLMs for dialogue, and ElevenLabs for ultra-realistic voice output. Integrated with OpenSearch for knowledge retrieval and Google Calendar for appointment booking.<br/><br/>
+
+Key Features:<br/>
+<ul>
+  <li>📞 AI Voice Assistant: Handles inbound calls with natural, conversational tone</li>
+  <li>🗣️ Realistic TTS/STT: ElevenLabs for expressive speech and AWS Transcribe for accurate recognition</li>
+  <li>🧠 Smart Dialogue Control: LangGraph-powered workflows for guided, dynamic conversations</li>
+  <li>📅 Calendar Booking: Real-time event creation with Google Calendar and SMS confirmations</li>
+  <li>🏘️ Multi-Community Support: Pulls structured info from different home communities using RAG</li>
+  <li>📊 Observability: Integrated with Langfuse for prompt tracking, metrics, and debugging</li>
+</ul><br/>
+
+Technical Highlights:
+<ul>
+  <li>Used Amazon Bedrock-hosted LLM for consistent and cost-effective language generation</li>
+  <li>Leveraged Twilio Programmable Voice for call routing and audio streaming</li>
+  <li>Built Python backend to manage conversation flow, STT/TTS, and calendar events</li>
+  <li>Integrated OpenSearch as a vector-based knowledge base for real-time context grounding</li>
+  <li>Employed LangGraph for multi-turn state machine control and fallback handling</li>
+  <li>Used PipeCat for real-time audio stream handling between Twilio and ElevenLabs</li>
+</ul>
+`,
+        role: `
+        Full-Stack AI Engineer <br/>
+Led the full lifecycle of voice assistant development and deployment:
+<ul>
+  <li>✅ Backend: Developed a Python server for managing voice inputs, LLM prompts, and event creation</li>
+  <li>📞 Voice Pipeline: Integrated Twilio, ElevenLabs TTS, and AWS Transcribe for fluid call experience</li>
+  <li>🧠 LLM Integration: Used Amazon Bedrock with LangGraph and Langfuse to control conversation logic</li>
+  <li>🔍 RAG System: Connected to OpenSearch vector DB for real-time community info retrieval</li>
+  <li>📅 Calendar Integration: Synced appointment bookings directly with Google Calendar + SMS confirmation</li>
+  <li>🚀 Deployment: Hosted services using AWS infrastructure with observability and error tracking</li>
+</ul>
+
+      `,
+        techStack: [
+            'Python',
+            'Twilio',
+            'Amazon Bedrock',
+            'ElevenLabs TTS',
+            'AWS Transcribe',
+            'LangGraph',
+            'Langfuse',
+            'PipeCat',
+            'OpenSearch',
+            'Google Calendar API',
+        ],
+        thumbnail: '/projects/long/ai-smart-call-long.png',
+        longThumbnail: '/projects/long/ai-smart-call-long.png',
+        images: [
+            '/projects/images/ai-call.png',
+            '/projects/images/ai-call-2.png',
+        ],
+    },
+    {
         title: 'DosePack',
         slug: 'dosepack',
         techStack: [
