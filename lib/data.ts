@@ -439,7 +439,7 @@ export const MY_EXPERIENCE = [
         duration: 'Dec 2022 - Mar 2025',
     },
     {
-        title: 'Software Engineer (Generative AI)',
+        title: 'Senior Software Engineer (Generative AI)',
         company: 'Armakuni',
         duration: 'April 2025 - Present',
     },

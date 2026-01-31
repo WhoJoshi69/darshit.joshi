@@ -1,24 +1,23 @@
 'use client';
 import SectionTitle from '@/components/SectionTitle';
-import Button from '@/components/Button';
-import { PROJECTS } from '@/lib/data';
+import { BLOGS } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
 import React, { useRef, useState, MouseEvent } from 'react';
-import Project from './Project';
+import Blog from './Blog';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ProjectList = () => {
+const BlogList = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const projectListRef = useRef<HTMLDivElement>(null);
+    const blogListRef = useRef<HTMLDivElement>(null);
     const imageContainer = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
-    const [selectedProject, setSelectedProject] = useState<string | null>(
-        PROJECTS[0].slug,
+    const [selectedBlog, setSelectedBlog] = useState<string | null>(
+        BLOGS[0].slug,
     );
 
     // update imageRef.current href based on the cursor hover position
@@ -27,7 +26,7 @@ const ProjectList = () => {
         (context, contextSafe) => {
             // show image on hover
             if (window.innerWidth < 768) {
-                setSelectedProject(null);
+                setSelectedBlog(null);
                 return;
             }
 
@@ -36,7 +35,7 @@ const ProjectList = () => {
                 if (!imageContainer.current) return;
 
                 if (window.innerWidth < 768) {
-                    setSelectedProject(null);
+                    setSelectedBlog(null);
                     return;
                 }
 
@@ -97,40 +96,39 @@ const ProjectList = () => {
 
     const handleMouseEnter = (slug: string) => {
         if (window.innerWidth < 768) {
-            setSelectedProject(null);
+            setSelectedBlog(null);
             return;
         }
 
-        setSelectedProject(slug);
+        setSelectedBlog(slug);
     };
 
     return (
-        <section className="pb-section" id="selected-projects">
+        <section className="pb-section pt-32" id="blogs">
             <div className="container">
-                <SectionTitle title="SELECTED PROJECTS" />
+                <SectionTitle title="LATEST BLOGS" />
 
-                <div className="group/projects relative" ref={containerRef}>
-                    {selectedProject !== null && (
+                <div className="group/blogs relative" ref={containerRef}>
+                    {selectedBlog !== null && (
                         <div
                             className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] aspect-[3/4] overflow-hidden opacity-0"
                             ref={imageContainer}
                         >
-                            {PROJECTS.map((project) => (
+                            {BLOGS.map((blog) => (
                                 <Image
-                                    src={project.thumbnail}
-                                    alt="Project"
+                                    src={blog.thumbnail}
+                                    alt="Blog"
                                     width="400"
                                     height="500"
                                     className={cn(
                                         'absolute inset-0 transition-all duration-500 w-full h-full object-cover',
                                         {
                                             'opacity-0':
-                                                project.slug !==
-                                                selectedProject,
+                                                blog.slug !== selectedBlog,
                                         },
                                     )}
                                     ref={imageRef}
-                                    key={project.slug}
+                                    key={blog.slug}
                                 />
                             ))}
                         </div>
@@ -138,33 +136,22 @@ const ProjectList = () => {
 
                     <div
                         className="flex flex-col max-md:gap-10"
-                        ref={projectListRef}
+                        ref={blogListRef}
                     >
-                        {PROJECTS.map((project, index) => (
-                            <Project
+                        {BLOGS.map((blog, index) => (
+                            <Blog
                                 index={index}
-                                project={project}
-                                selectedProject={selectedProject}
+                                blog={blog}
+                                selectedBlog={selectedBlog}
                                 onMouseEnter={handleMouseEnter}
-                                key={project.slug}
+                                key={blog.slug}
                             />
                         ))}
                     </div>
-                </div>
-
-                <div className="flex justify-center mt-16">
-                    <Button
-                        as="link"
-                        href="/blogs"
-                        variant="primary"
-                        className="slide-up-and-fade"
-                    >
-                        Take me to blogs
-                    </Button>
                 </div>
             </div>
         </section>
     );
 };
 
-export default ProjectList;
+export default BlogList;

@@ -56,7 +56,7 @@ const AboutMe = () => {
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
                     I am the GUY who get things done. <br /> Basically i am a
-                    backend developer,
+                    Software developer,
                     <br />
                     AI enthusiast who loves to be updated with tech and
                     experiment quirky UIs.
@@ -75,7 +75,7 @@ const AboutMe = () => {
                     <div className="md:col-span-7">
                         <div className="text-lg text-muted-foreground max-w-[450px]">
                             <p className="slide-up-and-fade">
-                                I&apos;m a backend web developer dedicated to
+                                I&apos;m a Software Engineer dedicated to
                                 turning ideas into creative solutions. I
                                 specialize in creating seamless and intuitive
                                 user experiences.
