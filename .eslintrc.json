@@ -1,6 +1,6 @@
 {
     "extends": ["next/core-web-vitals", "next/typescript"],
-    "ignorePatterns": ["lib/pdfParser/pdf.js"],
+    "ignorePatterns": ["lib/pdfParser/pdf.js", "lib/blogs/*.ts"],
     "rules": {
         "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
         "react-hooks/exhaustive-deps": "off",

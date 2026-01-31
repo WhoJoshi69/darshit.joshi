@@ -139,7 +139,7 @@ const Banner = () => {
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            10+
+                            15+
                         </h5>
                         <p className="text-muted-foreground">
                             Completed Projects

@@ -56,7 +56,7 @@ const AboutMe = () => {
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
                     I am the GUY who get things done. <br /> Basically i am a
-                    Software developer,
+                    software developer,
                     <br />
                     AI enthusiast who loves to be updated with tech and
                     experiment quirky UIs.
