@@ -10,7 +10,7 @@ I value keeping my site open source, but as you all know, _**plagiarism is bad**
 
 Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Next.js docs](https://nextjs.org/docs).
 
-If you like my work, give it a star⭐.
+If you like my work, give it a star⭐.c
 
 ### TL;DR
 
